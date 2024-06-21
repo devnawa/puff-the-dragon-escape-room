@@ -1,13 +1,13 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js"
 
-const ScreenTitle = "Test Title"
-const ScreenDescription = "Test Description"
-const ScreenFooter = "Test Footer"
+const ScreenTitle = "Escape the dark forest"
+const ScreenDescription = "Take a trip into the dark forest, discover clues, work out riddles and decode puzzles to be in for a chance to win prizes. Figure out the passwords in each scene to enter the next (scene 1 in Puff Puff Pass) enter your final answer in the last channel to join the leaderboard"
 
-const Room1Label = "Test Label 1"
-const Room2Label = "Test Label 2"
-const Room3Label = "Test Label 3"
-const Room4Label = "Test Label 4"
+const Room1Label = "Scene 2"
+const Room2Label = "Scene 3"
+const Room3Label = "Scene 4"
+const Room4Label = "Scene 5"
+const Room5Label = "Final answer"
 
 const Resonse_PrevRoomFail = "To move to this room, you must first find the password to the previous room."
 const Response_PasswordCheck = "Checking if the password you enter is matches with room..."
@@ -22,13 +22,13 @@ const Modal_Placeholder = "Enter password here."
 const MainScreen = new EmbedBuilder()
 .setTitle(ScreenTitle)
 .setDescription(ScreenDescription)
-.setFooter({ text : ScreenFooter })
 
 const Buttons = new ActionRowBuilder().addComponents(
     new ButtonBuilder().setCustomId("join1").setLabel(Room1Label).setStyle(ButtonStyle.Primary),
     new ButtonBuilder().setCustomId("join2").setLabel(Room2Label).setStyle(ButtonStyle.Primary),
     new ButtonBuilder().setCustomId("join3").setLabel(Room3Label).setStyle(ButtonStyle.Primary),
-    new ButtonBuilder().setCustomId("join4").setLabel(Room4Label).setStyle(ButtonStyle.Primary)
+    new ButtonBuilder().setCustomId("join4").setLabel(Room4Label).setStyle(ButtonStyle.Primary),
+    new ButtonBuilder().setCustomId("join5").setLabel(Room5Label).setStyle(ButtonStyle.Primary)
 )
 
 export const EscapeRoomConfig = {
